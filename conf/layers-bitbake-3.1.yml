@@ -1,0 +1,8 @@
+header:
+  version: 8
+env:
+  SHELL: bash
+repos:
+  bitbake:
+    url: "https://github.com/NGenetzky/bitbake.git"
+    refspec: "fbe13b12b6eff7326e5f1a72950b5ab75e4cf5ce"
