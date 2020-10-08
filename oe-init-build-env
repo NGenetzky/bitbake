@@ -40,12 +40,8 @@ _oe_init_build_env(){
         if [ -z "$2" ]; then
             if [ -z "$BITBAKEDIR" ]; then
                 # WARNING: This is very specific for a specific setup.
-                d_bitbake="$(git rev-parse --show-cdup)bitbake"
-                if [ ! -d "${d_bitbake}/bin/" ]; then
-                    # NOTE: kas does not support git submodules natively.
-                    git submodule update --init "${d_bitbake}"
-                fi
-                if [ ! -d "${d_bitbake}/bin/" ]; then
+                d_bitbake="${OEROOT}"
+                if [ ! -x "${d_bitbake}/bin/bitbake" ]; then
                     echo 'ERROR: Unable to locate bitbake'
                     return 1
                 fi
