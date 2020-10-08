@@ -82,10 +82,6 @@ oe_init_build_env(){
 
     BASEDIR="$(dirname "$(readlink -f "$THIS_SCRIPT")")"
     OEROOT="${OEROOT-"${BASEDIR}"}"
-    if ! cd "${OEROOT}" ; then
-        echo "Failed to cd into OEROOT (${OEROOT})" >&2
-        return 1
-    fi
 
     _oe_init_build_env "$@"
 }
