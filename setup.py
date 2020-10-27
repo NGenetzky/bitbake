@@ -7,6 +7,7 @@ from pathlib import Path
 from setuptools import find_packages
 from setuptools import setup
 
+# venv/lib/python3.8/site-packages/_bbpath.pth
 
 _config = {
     "name": "bitbake",
@@ -35,6 +36,8 @@ _config = {
     #     "console_scripts": ("{{ cookiecutter.cli_script }} = {{ cookiecutter.app_name }}.cli:main",),
     # },
     # "data_files": ("etc/",),
+    "data_files": [("lib/python3.8/site-packages/", ["conf/bitbake_bbpath.pth"])],
+    "zip_safe": False,
 }
 
 

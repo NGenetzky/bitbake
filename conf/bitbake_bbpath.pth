@@ -1,0 +1,1 @@
+import os; os.environ['BBPATH'] = '/home/ngenetzky/git/github.com/NGenetzky/bitbake'
